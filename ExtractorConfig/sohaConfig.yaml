@@ -1,0 +1,32 @@
+Avatar:
+  css: "div a img"
+  multiple: True
+  type: Attribute
+  attribute: src
+NewsID:
+  css: "h3 a"
+  type: Attribute
+  attribute: data-id
+  multiple: True
+Title:
+  css: "h3 a"
+  type: Attribute
+  attribute: title
+  multiple: True
+url:
+  css: "h3 a"
+  type: Link
+  multiple: True
+sapo:
+  css: ".sapo"
+  type: Text
+  multiple: True
+url1:
+  css: "li a"
+  type: Link
+  multiple: True
+Title1:
+  css: "li a"
+  multiple: True
+  type: Attribute
+  attribute: title
