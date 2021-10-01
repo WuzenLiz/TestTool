@@ -1,8 +1,4 @@
 num =  [num for num in range(1,10)]
-def serializerData(data):
-    for key in data:
-        data[key]=list(dict.fromkeys(data[key]))
-    return data
 
 def mergeData(data):
     for key in list(data.keys()):
@@ -16,9 +12,18 @@ def mergeData(data):
                 else:
                     data[key]+=data[key+str(n)]
                     data.pop(key+str(n))
+            else:
+                pass
     return data
 
 def compareData(data,source):
     for item in data['ListNews']:
         for item0 in source:
-            pass
+            for key in item:
+                if key in item0 and item[key] is not None:
+                    if item[key] <= item0[key] :
+                        return "True"
+                    else:
+                        return "Data in "+str(key)+"was "+str(item[key])+" but the data on server is"+str(item0[key])
+                elif item[key] is None:
+                    return "There is some data on server's key "+str(key)+" but data on site was not! Pls check!"

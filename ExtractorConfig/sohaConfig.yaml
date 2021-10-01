@@ -51,3 +51,133 @@ ListNews2:
       css: div.time
       type: Attribute
       attribute: title
+ListNews3:
+  css: "div.shnews_box "
+  type: Text
+  multiple: true
+  children:
+    NewsId:
+      css: "a.shnews_title"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: "div.shnews_total h3"
+      type: Text
+    Url:
+      css: "div.shnews_total"
+      type: Link
+    AvatarCustom:
+      css: img
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: p.shnews_sapo
+      type: Text
+    LastModifiedDate:
+      css: div.time
+      type: Attribute
+      attribute: title
+ListNews4:
+  css: "div.sukiennonghomenew div.sknhn-left"
+  type: Text
+  multiple: true
+  children:
+    NewsId:
+      css: "a.shnews_title"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: "h3"
+      type: Text
+    Url:
+      css: "h3 "
+      type: Link
+    AvatarCustom:
+      css: img
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    LastModifiedDate:
+      css: div.time
+      type: Attribute
+      attribute: title
+ListNews5:
+  css: "div.sukiennonghomenew div.sknhn-left ul li"
+  type: Text
+  multiple: true
+  children:
+    NewsId:
+      css: "a.shnews_title"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: "h3"
+      type: Text
+    Url:
+      css: "h3 "
+      type: Link
+    AvatarCustom:
+      css: img
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    LastModifiedDate:
+      css: div.time
+      type: Attribute
+      attribute: title
+ListNews6:
+  css: "div.sukiennonghomenew div.sknhn-right .flexbtw"
+  type: Text
+  multiple: true
+  children:
+    NewsId:
+      css: "a.shnews_title"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: "h3"
+      type: Text
+    Url:
+      css: "h3 "
+      type: Link
+    AvatarCustom:
+      css: img
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    LastModifiedDate:
+      css: div.time
+      type: Attribute
+      attribute: title
+ListNews7:
+  css: "div.sukiennonghomenew div.sknhn-right ul li"
+  type: Text
+  multiple: true
+  children:
+    NewsId:
+      css: "a.shnews_title"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: "a"
+      type: Text
+    Url:
+      css: "a"
+      type: Link
+    AvatarCustom:
+      css: img
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    LastModifiedDate:
+      css: div.time
+      type: Attribute
+      attribute: title

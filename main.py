@@ -3,7 +3,7 @@ from flask import Flask,app, json,request,jsonify
 from selectorlib.formatter import Formatter
 from selectorlib.selectorlib import Extractor
 from bs4 import BeautifulSoup
-from dataUtil import mergeData, serializerData
+from dataUtil import compareData, mergeData
 
 #define Stub
 app = Flask(__name__)
@@ -22,12 +22,10 @@ def extractData(htmlSet,site):
     e  = Extractor.from_yaml_file(loadCfg,formatters=formatters) 
     # data = e.extract(htmlSet)
     # data = mergeData(data)
-    # data = serializerData(data)
     try:
         data = e.extract(htmlSet)
         if data:
             data = mergeData(data)
-            # data = serializerData(data)
             return data
         else:
             return "None content here"
@@ -45,10 +43,7 @@ def index():
     if htmlSet and site:   
         htmlPrase = BeautifulSoup(htmlSet,"lxml")
         data = extractData(str(htmlPrase),site)
-        # if compareData(data):
-        #     return jsonify('True')
-        # else:
-        return jsonify(data)
+        return jsonify(compareData(data,localData))
     else:
         return jsonify("There is something missing")
             
