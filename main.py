@@ -15,6 +15,10 @@ class AvatarUrl(Formatter):
     def format(self, text):
         return re.findall(r'\'(.+?)\'',str(text))[0]
 
+class IdUrl(Formatter):
+    def format(self, text):
+        return re.findall(r'\-(.+?)\.htm',str(text))[0]
+
 #Data stub
 def extractData(htmlSet,site):
     loadCfg = './ExtractorConfig/'+str(site)+'Config.yaml'
@@ -43,7 +47,8 @@ def index():
     if htmlSet and site:   
         htmlPrase = BeautifulSoup(htmlSet,"lxml")
         data = extractData(str(htmlPrase),site)
-        return jsonify(compareData(data,localData))
+        # return jsonify(compareData(data,localData))
+        return jsonify(data)
     else:
         return jsonify("There is something missing")
             

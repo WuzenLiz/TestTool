@@ -1,0 +1,44 @@
+ListNews:
+  css: ".box-home-focus-item"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: "a.box-home-focus-link-title"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: "a.box-home-focus-link-title"
+      type: Text
+    Url:
+      css: a
+      type: Link
+    AvatarCustom:
+      css: img
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: p
+      type: Text
+ListNews2:
+  css: ".box-category-item"
+  type: Text
+  multiple: true
+  children:
+    NewsId:
+      css: "h3 a"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: "h3 a"
+      type: Text
+    Url:
+      css: a
+      type: Link
+    AvatarCustom:
+      css: img
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: p
+      type: Text
