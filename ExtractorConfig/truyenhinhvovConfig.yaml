@@ -42,3 +42,47 @@ ListNews2:
     Sapo:
       css: p
       type: Text
+ListNews3:
+  css: ".box-list-focus-item"
+  type: Text
+  multiple: true
+  children:
+    NewsId:
+      css: "a.box-list-focus-link-title"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: "a.box-list-focus-link-title"
+      type: Text
+    Url:
+      css: a
+      type: Link
+    AvatarCustom:
+      css: img
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: p.sapo
+      type: Text
+ListNews4:
+  css: ".box-stream-item"
+  type: Text
+  multiple: true
+  children:
+    NewsId:
+      css: "a.box-stream-link-title"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: "a.box-stream-link-title"
+      type: Text
+    Url:
+      css: a
+      type: Link
+    AvatarCustom:
+      css: img
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: p.box-stream-sapo
+      type: Text
