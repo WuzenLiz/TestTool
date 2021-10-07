@@ -3,7 +3,7 @@ from flask import Flask,app, json,request,jsonify
 from selectorlib.formatter import Formatter
 from selectorlib.selectorlib import Extractor
 from bs4 import BeautifulSoup
-from dataUtil import compareData, mergeData
+from dataUtil import compareData, mergeData, serlizie
 
 #define Stub
 app = Flask(__name__)
@@ -13,11 +13,26 @@ with open("./soha-newspublish.json") as oFile:
 
 class AvatarUrl(Formatter):
     def format(self, text):
-        return re.findall(r'\'(.+?)\'',str(text))[0]
+        if text:
+            return re.findall(r'\'(.+?)\'',str(text))[0]
 
 class IdUrl(Formatter):
     def format(self, text):
-        return re.findall(r'\-(.+?)\.htm',str(text))[0]
+        if text:
+            try:
+                a =  re.findall(r'\-\d+\.',str(text))[0]
+                return a.removeprefix('-').removesuffix('.')
+            except Exception as e:
+                pass
+
+class IdUrl2(Formatter):
+    def format(self, text):
+        if text:
+            try:
+                a =  re.findall(r'\d+',str(text))[0]
+                return a.removeprefix('-').removesuffix('.')
+            except Exception as e:
+                pass            
 
 #Data stub
 def extractData(htmlSet,site):

@@ -1,0 +1,79 @@
+ListNews:
+  css: "div.row .item-big-new"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: "div.info a"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".info a"
+      type: Text
+    Url:
+      css: ".info a"
+      type: Link
+    AvatarCustom:
+      css: "div.avarta img"
+      type: Attribute
+      attribute: src
+ListNews2:
+  css: "div.row .scroll-new-top ul li"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: "a"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: "a"
+      type: Text
+    Url:
+      css: "a"
+      type: Link
+ListNews3:
+  css: "div.row .item"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: "div.info a"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".info a"
+      type: Text
+    Url:
+      css: ".info a"
+      type: Link
+    AvatarCustom:
+      css: "div.avarta img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .gknews_sapo
+      type: Text
+ListNews4:
+  css: ".item-stream"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: "div.info a"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".info a"
+      type: Text
+    Url:
+      css: ".info a"
+      type: Link
+    AvatarCustom:
+      css: "div.avarta img"
+      type: Attribute
+      attribute: src

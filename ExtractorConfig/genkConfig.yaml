@@ -1,0 +1,123 @@
+ListNews:
+  css: "div.gk_flx div.gknews_box "
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".gknews_title"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: ".gknews_title"
+      type: Text
+    Url:
+      css: ".gknews_title"
+      type: Link
+    AvatarCustom:
+      css: "div.gknews_box i"
+      type: Attribute
+      attribute: style
+      format: AvatarUrl
+    Sapo:
+      css: .gknews_sapo
+      type: Text
+    LastModifiedDate:
+      css: div.time
+      type: Attribute
+      attribute: title
+ListNews2:
+  css: "div.gknews_box"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".gknews_title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".gknews_title"
+      type: Text
+    Url:
+      css: ".gknews_title"
+      type: Link
+    AvatarCustom:
+      css: "div.gknews_box i"
+      type: Attribute
+      attribute: style
+      format: AvatarUrl
+    Sapo:
+      css: .gknews_sapo
+      type: Text
+    LastModifiedDate:
+      css: div.time
+      type: Attribute
+      attribute: title
+ListNews3:
+  css: "ul.knsw-list li.shownews"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".knswli-right .knswli-title a"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: ".knswli-right .knswli-title a"
+      type: Text
+    Url:
+      css: ".knswli-right .knswli-title a"
+      type: Link
+    AvatarCustom:
+      css: ".knswli-left img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: ".knswli-right span"
+      type: Text
+ListNews4:
+  css: "div.gknews_box .noticeable-news ul li.dont-miss__item"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: "a.show-popup"
+      type: Attribute
+      attribute: data-popup-url
+      format: IdUrl2
+    Title:
+      css: "h3 a"
+      type: Text
+    Url:
+      css: "a.show-popup"
+      type: Link
+    AvatarCustom:
+      css: "a.show-popup img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .gknews_sapo
+      type: Text
+ListNews5:
+  css: "div.gknews_box .noticeable-news ul li.nn-item"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: "a.item-news-thumb"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: "h4 a"
+      type: Text
+    Url:
+      css: "a.item-news-thumb"
+      type: Link
+    AvatarCustom:
+      css: "a.item-news-thumb img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .gknews_sapo
+      type: Text

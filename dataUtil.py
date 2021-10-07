@@ -14,7 +14,7 @@ def mergeData(data):
                     data.pop(key+str(n))
             else:
                 pass
-    return data
+    return serlizie(data)
 
 def compareData(data,source):
     for item in data['ListNews']:
@@ -27,3 +27,13 @@ def compareData(data,source):
                         return "Data in "+str(key)+"was "+str(item[key])+" but the data on server is"+str(item0[key])
                 elif item[key] is None:
                     return "There is some data on server's key "+str(key)+" but data on site was not! Pls check!"
+                
+def serlizie(data):
+    count = 0
+    for item in data['ListNews']:
+        for key in list(item.keys()):
+            if item[key] is None:
+                count += 1
+                if count == len(item):
+                    data['ListNews'].pop(data['ListNews'].index(item))
+    return data
