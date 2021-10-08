@@ -43,6 +43,7 @@ def extractData(htmlSet,site):
     # data = mergeData(data)
     try:
         data = e.extract(htmlSet)
+        # print(data)
         if data:
             data = mergeData(data)
             return data

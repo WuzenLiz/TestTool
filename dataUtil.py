@@ -14,7 +14,9 @@ def mergeData(data):
                     data.pop(key+str(n))
             else:
                 pass
-    return serlizie(data)
+    # print("Merger"+str(data))
+    data = serlizie(data)
+    return remDupl(data)
 
 def compareData(data,source):
     for item in data['ListNews']:
@@ -34,6 +36,18 @@ def serlizie(data):
         for key in list(item.keys()):
             if item[key] is None:
                 count += 1
-                if count == len(item):
-                    data['ListNews'].pop(data['ListNews'].index(item))
+        if count == len(item):
+            print(count,len(item))
+            # print('deleted: '+str(item))
+            data['ListNews'].pop(data['ListNews'].index(item))    
+    return data
+
+def remDupl(data):
+    temp = []
+    res = dict()
+    for item in data['ListNews']:
+        if item not in temp:
+            temp.append(item)
+            res['ListNews'] = temp    
+    data['ListNews'] = res['ListNews']
     return data
