@@ -1,3 +1,7 @@
+key_redis:
+  css: "td.key_redis span"
+  type: Attribute
+  attribute: data-keycd
 ListNews:
   css: ".box-home-focus-item"
   multiple: true

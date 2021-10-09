@@ -1,0 +1,175 @@
+key_redis:
+  css: "td.key_redis span"
+  type: Attribute
+  attribute: data-keycd
+ListNews:
+  css: ".focusleft .itemleft"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".infofocus a"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: ".infofocus a"
+      type: Text
+    Url:
+      css: ".infofocus a"
+      type: Link
+    AvatarCustom:
+      css: ".avatar"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: "time"
+      type: Text
+    Author:
+      css: ".author p"
+      type: Text
+ListNews1:
+  css: ".focusright .itemright"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".infofocus a"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: "h3 a"
+      type: Text
+    Url:
+      css: "h3 a"
+      type: Link
+    AvatarCustom:
+      css: ".avatar"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: "time"
+      type: Text
+    Author:
+      css: ".author p"
+      type: Text
+ListNews2:
+  css: ".focusright ul li"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".info a"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: "h3 a"
+      type: Text
+    Url:
+      css: "h3 a"
+      type: Link
+    AvatarCustom:
+      css: ".avatar"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: "time"
+      type: Text
+    Author:
+      css: ".author p"
+      type: Text
+ListNews3:
+  css: "ul.streamList li"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".socialfocus span"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: "h3 a"
+      type: Text
+    Url:
+      css: "h3 a"
+      type: Link
+    AvatarCustom:
+      css: ".avatar"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".datetime"
+      type: Attribute
+      attribute: title
+    Author:
+      css: ".author p"
+      type: Text
+ListNews4:
+  css: ".clearfix .focusleft"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".infofocus a"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: ".infofocus a"
+      type: Text
+    Url:
+      css: ".infofocus a"
+      type: Link
+    AvatarCustom:
+      css: ".avatar"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".datetime"
+      type: Attribute
+      attribute: title
+    Author:
+      css: ".author p"
+      type: Text
+ListNews5:
+  css: ".clearfix .listfocus ul li"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: "h3 a"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: "h3 a"
+      type: Text
+    Url:
+      css: "h3 a"
+      type: Link
+    AvatarCustom:
+      css: ".avatar"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".datetime"
+      type: Attribute
+      attribute: title
+    Author:
+      css: ".author p"
+      type: Text

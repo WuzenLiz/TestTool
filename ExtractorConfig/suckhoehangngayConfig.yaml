@@ -1,0 +1,29 @@
+key_redis:
+  css: "td.key_redis span"
+  type: Attribute
+  attribute: data-keycd
+ListNews:
+  css: ".box .list-item .item"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: "a.item__content__title"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: "a.item__content__title"
+      type: Text
+    Url:
+      css: "a.item__content__title"
+      type: Link
+    AvatarCustom:
+      css: ".item__pic img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .item__content__excerpt
+      type: Text
+    Time:
+      css: "time"
+      type: Text
