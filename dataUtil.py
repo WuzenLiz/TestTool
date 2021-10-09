@@ -31,13 +31,13 @@ def compareData(data,source):
                     return "There is some data on server's key "+str(key)+" but data on site was not! Pls check!"
                 
 def serlizie(data):
-    count = 0
     for item in data['ListNews']:
+        count = 0
         for key in list(item.keys()):
             if item[key] is None:
+                # print(key,item[key])
                 count += 1
         if count == len(item):
-            print(count,len(item))
             # print('deleted: '+str(item))
             data['ListNews'].pop(data['ListNews'].index(item))    
     return data
