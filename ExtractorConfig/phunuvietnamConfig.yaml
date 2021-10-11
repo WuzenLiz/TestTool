@@ -1,0 +1,347 @@
+key_redis:
+  css: "td.key_redis span"
+  type: Attribute
+  attribute: data-keycd
+ListNews:
+  css: ".box-focus"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews1:
+  css: ".box-newest ul li"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews2:
+  css: ".swiper-wrapper .item"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews3:
+  css: ".section-tieudung .news-list .item"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews4:
+  css: ".section-tieudung .news-list li"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews5:
+  css: ".section-tieudung .news-right-cate ul li"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews6:
+  css: ".news-main-cate .main-news"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews7:
+  css: ".box-cate .news-list li"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Question:
+      css: .question
+      type: Text
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews8:
+  css: ".rpt_Imgvideonoibat-wrapper"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews9:
+  css: ".section-multimedia .news-list .item"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews10:
+  css: ".emagazin .emagazin-list .mgz-item"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text

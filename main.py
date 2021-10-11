@@ -3,7 +3,8 @@ from flask import Flask,app, json,request,jsonify
 from selectorlib.formatter import Formatter
 from selectorlib.selectorlib import Extractor
 from bs4 import BeautifulSoup
-from dataUtil import compareData, mergeData, serlizie
+from dataUtil import compareData, mergeData
+from dateutil import parser
 
 #define Stub
 app = Flask(__name__)
@@ -33,6 +34,15 @@ class IdUrl2(Formatter):
                 return a.removeprefix('-').removesuffix('.')
             except Exception as e:
                 pass            
+
+class timeF(Formatter):
+    def format(self, text):
+        if text:
+            try:
+                a =  parser.parse(text)
+                return a.isoformat()
+            except Exception as e:
+                pass 
 
 #Data stub
 def extractData(htmlSet,site):

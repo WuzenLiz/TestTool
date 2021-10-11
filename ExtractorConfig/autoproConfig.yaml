@@ -1,0 +1,280 @@
+key_redis:
+  css: "td.key_redis span"
+  type: Attribute
+  attribute: data-keycd
+ListNews:
+  css: ".smallnews ul li"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews1:
+  css: ".bignews1"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews2:
+  css: ".news-extra"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: "a"
+      type: Attribute
+      attribute: data-id
+    Title:
+      css: "a"
+      type: Text
+    Url:
+      css: "a"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews4:
+  css: ".lstnews ul li"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews5:
+  css: ".bignews"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews6:
+  css: ".bignews ul li"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews7:
+  css: ".listnews ul li"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews8:
+  css: ".smallvideo ul li"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: "a img"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text
+ListNews9:
+  css: ".bigvideo"
+  multiple: true
+  type: Text
+  children:
+    NewsId:
+      css: ".title"
+      type: Attribute
+      attribute: href
+      format: IdUrl
+    Title:
+      css: ".title"
+      type: Text
+    Url:
+      css: ".title"
+      type: Link
+    AvatarCustom:
+      css: ".thumbnail"
+      type: Attribute
+      attribute: src
+    Sapo:
+      css: .sapo
+      type: Text
+    Time:
+      css: ".timeago"
+      type: Attribute
+      attribute: title
+      format: timeF
+    Author:
+      css: ".author p"
+      type: Text

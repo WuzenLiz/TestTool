@@ -1,4 +1,4 @@
-num =  [num for num in range(1,10)]
+num =  [num for num in range(1,50)]
 
 def mergeData(data):
     for key in list(data.keys()):
@@ -51,3 +51,5 @@ def remDupl(data):
             res['ListNews'] = temp    
     data['ListNews'] = res['ListNews']
     return data
+
+                
