@@ -49,13 +49,13 @@ def extractData(htmlSet,site):
     loadCfg = './ExtractorConfig/'+str(site)+'Config.yaml'
     formatters = Formatter.get_all()
     e  = Extractor.from_yaml_file(loadCfg,formatters=formatters) 
-    # data = e.extract(htmlSet)
-    # data = mergeData(data)
+    data = e.extract(htmlSet)
+    data = mergeData(data)
     try:
         data = e.extract(htmlSet)
         # print(data)
         if data:
-            data = mergeData(data)
+            # data = mergeData(data)
             return data
         else:
             return "None content here"

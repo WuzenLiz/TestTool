@@ -1,0 +1,260 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/popup.css" />
+  </head>
+
+  <body style="text-align: center">
+    <h2>Popup</h2>
+
+    <div class="popup" onclick="">
+      Click me to toggle the popup!
+      <div
+        class="newsposition:zoneid0type1"
+        style="
+          border: solid 1px red;
+          background-color: #f1f1f1;
+          position: absolute;
+          top: 0px;
+        "
+      >
+        <table>
+          <tbody>
+            <tr>
+              <td colspan="2">
+                <span style="padding: 2px 0px; display: block"
+                  >newsposition:zoneid0type1</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span
+                  style="
+                    cursor: pointer;
+                    background-color: #4caf50;
+                    padding: 3px 6px;
+                    color: white;
+                    float: right;
+                  "
+                  data-cd="clone-newsposition:zoneid0type1"
+                  onclick="cloneGetDataCd('clone-newsposition:zoneid0type1')"
+                  >Clone Data
+                </span>
+              </td>
+              <td>
+                <img
+                  data-cd="clone-newsposition:zoneid0type1"
+                  src="./icons/cancel.png"
+                  style="height: 20px"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span
+                  style="
+                    cursor: pointer;
+                    background-color: #4caf50;
+                    padding: 3px 6px;
+                    color: white;
+                    float: right;
+                  "
+                  data-cd="show-newsposition:zoneid0type1"
+                  onclick="cloneGetDataCd('show-newsposition:zoneid0type1')"
+                  >Show Dat
+                </span>
+              </td>
+              <td>
+                <img
+                  data-cd="show-newsposition:zoneid0type1"
+                  src="./icons/cancel.png"
+                  style="height: 20px"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="popupShowData" id="popupShowData" style="display: none">
+      <section data-reactroot="" class="ims-modal info">
+        <div class="ims-modal-overlay"></div>
+        <div
+          class="ims-modal-wrapper"
+          style="
+            width: 900px;
+            height: 700px;
+            margin-left: -253px;
+            margin-top: -136px;
+          "
+        >
+          <header>Data<span class="btn_close" id="btnClose"></span></header>
+          <div class="modal-content">
+            <div>
+              <textarea
+                id="txtReturnMessage"
+                name="txtReturnMessage"
+                placeholder="Show data"
+                style="
+                  width: 880px;
+                  height: 630px;
+                  padding: 6px;
+                  resize: none;
+                  margin-bottom: 10px;
+                "
+              >
+              </textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      document
+        .getElementById("btnClose")
+        .addEventListener("click", function () {
+          document.getElementById("popupShowData").style.display = "none";
+        });
+
+      function updateStatus(dataCd, action) {
+        console.log("----------", dataCd);
+        var result = document.evaluate(
+          "//img[@data-cd='" + dataCd + "']",
+          document,
+          null,
+          XPathResult.FIRST_ORDERED_NODE_TYPE,
+          null
+        ).singleNodeValue;
+        console.log(result);
+        if (result) {
+          if (action == "process") {
+            result.src = "./icons/loading.gif";
+          } else if (action == "success") {
+            result.src = "./icons/check.png";
+          } else {
+            result.src = "./icons/cancel.png";
+          }
+        }
+      }
+      function cloneGetDataCd(dataCd) {
+        updateStatus(dataCd, "process");
+        httpGet(dataCd, function (responseText) {
+          res = JSON.parse(responseText);
+          if (res && res["status"]) {
+            updateStatus(dataCd, "success");
+            document.getElementById("popupShowData").style.display = "block";
+            document.getElementById("txtReturnMessage").value = JSON.stringify(
+              res,
+              null,
+              4
+            );
+          } else {
+            updateStatus(dataCd, "error");
+          }
+        });
+      }
+
+      function httpGet(dataCd, cb) {
+        var theUrl = "http://192.168.19.173:8028/copy-redis";
+        var _action = "";
+        if (dataCd.startsWith("clone-")) {
+          _action = "copy";
+        } else {
+          _action = "show";
+        }
+        var _key = dataCd.replace("clone-", "").replace("show-", "");
+        var _domain = window.location.hostname
+          .replace("http://", "")
+          .replace("https://", "");
+        var data = "domain=" + _domain + "&key=" + _key + "&action=" + _action;
+
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+        xhr.addEventListener("readystatechange", function () {
+          if (this.readyState === 4) {
+            console.log(xhr.responseText);
+            cb(xhr.responseText);
+          }
+        });
+        xhr.open("POST", theUrl, true);
+        xhr.setRequestHeader("token", "GmAZSiYYQYCW1KILbjvWxXcjxFXxhdPU");
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded"
+        );
+        xhr.send(data);
+      }
+    </script>
+  </body>
+</html>
+
+<div class="popup" onclick="">
+  Click me to toggle the popup!
+  <div
+    class="${datakey}"
+    style="
+      border: solid 1px red;
+      background-color: #f1f1f1;
+      position: absolute;
+      top: 0px;
+    "
+  >
+    <table>
+      <tbody>
+        <tr>
+          <td colspan="2">
+            <span style="padding: 2px 0px; display: block">${datakey}</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span
+              style="
+                cursor: pointer;
+                background-color: #4caf50;
+                padding: 3px 6px;
+                color: white;
+                float: right;
+              "
+              data-cd="clone-${datakey}"
+              onclick="cloneGetDataCd('clone-${datakey}')"
+              >Clone Data
+            </span>
+          </td>
+          <td>
+            <img
+              data-cd="clone-${datakey}"
+              src="./icons/cancel.png"
+              style="height: 20px"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span
+              style="
+                cursor: pointer;
+                background-color: #4caf50;
+                padding: 3px 6px;
+                color: white;
+                float: right;
+              "
+              data-cd="show-${datakey}"
+              onclick="cloneGetDataCd('show-${datakey}')"
+              >Show Dat
+            </span>
+          </td>
+          <td>
+            <img
+              data-cd="show-${datakey}"
+              src="./icons/cancel.png"
+              style="height: 20px"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`

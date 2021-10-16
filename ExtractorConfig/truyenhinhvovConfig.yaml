@@ -1,8 +1,10 @@
-key_redis:
-  css: "td.key_redis span"
-  type: Attribute
-  attribute: data-keycd
-ListNews:
+domain:
+  css: "td.data_redis #site_host_name"
+  type: Text
+Info_key:
+  css: "td.data_redis #box_data_key"
+  type: Text
+data:
   css: ".box-home-focus-item"
   multiple: true
   type: Text
@@ -24,7 +26,7 @@ ListNews:
     Sapo:
       css: p
       type: Text
-ListNews2:
+data2:
   css: ".box-category-item"
   type: Text
   multiple: true
@@ -46,7 +48,7 @@ ListNews2:
     Sapo:
       css: p
       type: Text
-ListNews3:
+data3:
   css: ".box-list-focus-item"
   type: Text
   multiple: true
@@ -68,7 +70,7 @@ ListNews3:
     Sapo:
       css: p.sapo
       type: Text
-ListNews4:
+data4:
   css: ".box-stream-item"
   type: Text
   multiple: true
